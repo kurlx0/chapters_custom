@@ -175,7 +175,7 @@ button {
 }
 
 .hero > .container > .classic-icon {
-	transform: rotate(-12deg) translate(4rem, 10rem);
+	transform: rotate(-12deg) translate(4rem, 14rem);
 }
 
 .hero > .container > .classic-icon > i {
