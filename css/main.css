@@ -163,7 +163,7 @@ button {
 
 /* HERO PAGE */
 .hero {
-	min-height: 90vh;
+	min-height: 100vh;
 	/*background: var(--primary-color);*/
 	background: var(--background-r-gradient);
 }
@@ -171,7 +171,7 @@ button {
 .hero > .container {
 	display: flex;
 	align-items: center;
-	height: 80vh;
+	height: 90vh;
 }
 
 .hero > .container > .classic-icon {
