@@ -96,12 +96,15 @@ button {
 
 .nav-bar > .container {
 	/*background: var(--primary-color);*/
-	background: #02102499;
+	/*background: #02102499;*/
+	background: none;
 	backdrop-filter: blur(4px);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	padding: 30px 50px;
+	transition: 0.7s;
 }
 
 .nav-bar > .container > .logo {
@@ -377,9 +380,10 @@ button {
 	font-size: 12px;
 	padding: 8px;
 	/*background: var(--ice-blue);*/
-	background: rgb(70 176 220);
-	border-radius: var(--border-radius-m);
-	color: var(--pure-white);
+	background: rgba(97 187 224 / 29%);
+    border-radius: var(--border-radius-m);
+    /*color: var(--secondary-color);*/
+    color: var(--secondary-color);
 	/*color: rgba(20, 46, 74, 100%);*/
 	/*filter: opacity(0.8) contrast(1.8);*/
 }
