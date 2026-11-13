@@ -376,11 +376,12 @@ button {
 .services-sect > .container > .services-content > .card > .span-el > span {
 	font-size: 12px;
 	padding: 8px;
-	background: var(--ice-blue);
+	/*background: var(--ice-blue);*/
+	background: rgb(70 176 220);
 	border-radius: var(--border-radius-m);
-	color: var(--secondary-color);
-	color: rgba(20, 46, 74, 100%);
-	filter: opacity(0.8) contrast(1.8);
+	color: var(--pure-white);
+	/*color: rgba(20, 46, 74, 100%);*/
+	/*filter: opacity(0.8) contrast(1.8);*/
 }
 
 
