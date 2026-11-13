@@ -3,8 +3,8 @@
   <head>
 
   	<!-- META DATA -->
-  	<meta charset="utf-8">
-  	<meta type="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   	<!-- TITLE -->
   	<title>Chapters For Art</title>
@@ -39,7 +39,7 @@
 	  	 -->
 
   	<!-- NAVIGATION PANEL -->
-  	<header class="nav-bar">
+  	<header id="nav-bar" class="nav-bar">
   	  <div class="container">
   	  	<a href="#" class="logo">
   	  	  <img src="pictures/logo_white_transparent-bg.png" alt="Chapters Logo" class="logo-icon" />
@@ -49,18 +49,55 @@
   	  	  	<a href="#home" class="nav-item">Home</a>
   	  	  </li>
   	  	  <li>
-	  	  	<a href="#services" class="nav-item">Services</a>
-	  	  </li>
-	  	  <li>
-	  	  	<a href="#" class="nav-item">Projects</a>
-	  	  </li>
-	  	  <li>
-	  	  	<a href="#" class="nav-item">Contact</a>
-	  	  </li>
-	  	</ul>
-	  	<div class="nav-btn">
-	  	  <button class="call-btn">Contact</button>
-	  	</div>
+		  	  	<a href="#services" class="nav-item">Services</a>
+		  	  </li>
+		  	  <li>
+		  	  	<a href="#projects" class="nav-item">Projects</a>
+		  	  </li>
+		  	  <li>
+		  	  	<a href="#contacts" class="nav-item">Contact</a>
+		  	  </li>
+		  	</ul>
+		  	<div class="nav-btn">
+		  	  <a href="tel:+256761752794"><button class="call-btn">Call Us</button></a>
+		  	</div>
+  	  </div>
+  	  <div id="container-query" class="container-query">
+  	  	<div id="nav-close-btn" class="nav-close-btn">
+  	  		<i class="fa-solid fa-xmark"></i>
+  	  	</div>
+  	  	<div class="primary-tab">
+	  	  	<a href="#" class="logo">
+	  	  	  <img src="pictures/logo_white_transparent-bg.png" alt="Chapters Logo" class="logo-icon" />
+	  	  	</a>
+			  	<div class="nav-btn">
+			  	  <a href="tel:+256761752794" ><button class="call-btn">Call Us</button></a>
+			  	</div>
+  	  	</div>
+  	  	<ul class="nav-list">
+  	  	  <li>
+  	  	  	<a href="#home" class="nav-item">Home</a>
+  	  	  </li>
+  	  	  <li>
+		  	  	<a href="#services" class="nav-item">Services</a>
+		  	  </li>
+		  	  <li>
+		  	  	<a href="#projects" class="nav-item">Projects</a>
+		  	  </li>
+		  	  <li>
+		  	  	<a href="#contacts" class="nav-item">Contact</a>
+		  	  </li>
+		  	</ul>
+  	  </div>
+  	  <div class="container-query-display">
+  	  	<div class="logo">
+  	  		<img src="pictures/logo_white_transparent-bg.png" alt="Chapters Logo" class="logo-icon" >
+  	  	</div>
+  	  	<div id="nav-elipsis" class="nav-elipsis">
+  	  		<!-- <i class="fa-solid fa-bars"></i>
+  	  		<i class="fa-solid fa-ellipsis"></i> -->
+  	  		<i class="fa-solid fa-ellipsis-vertical"></i>
+  	  	</div>
   	  </div>
   	</header>
 
@@ -74,44 +111,19 @@
   	  	  	<h3>Your brands next <span style="font-weight: 600;">Chapter!</span></h3>
   	  	  	<p>We are dedicated to ensuring that the Design is crafted <span>"Just for You"</span>!</p>
   	  	  	<div class="hero-button">
-  	  	  	  <button class="work-btn">Our Work</button>
+  	  	  	  <a href="#projects"><button class="work-btn">Our Work</button></a>
   	  	  	</div>
   	  	  </div>
   	  	  <div class="classic-icon">
-  	  	  	<i class="fa-solid fa-pen-to-square"></i>
+  	  	  	<!-- <i class="fa-solid fa-pen-to-square"></i> -->
+  	  	  	<img src="pictures/c_logo_white_transparent-bg.png" alt="c">
   	  	  </div>
   	  	</div>
   	  </section>
 
   	  <section class="services-sect" id="services">
   	  	<style>
-  	  		.services-sect > .container > .services-content {
-  	  			display: flex;
-  	  			gap: 2rem;
-  	  			flex-wrap: wrap;
-  	  			justify-content: center;
-  	  		}
-  	  		.services-sect > .container > .services-content > .card {
-  	  			background: var(--ice-blue);
-  	  			padding: 30px;
-  	  			border-radius: var(--border-radius-xl);
-  	  			width: 350px;
-  	  			z-index: 10;
-  	  			/*filter: opacity(0.9);*/
-  	  		}
-  	  		.services-sect > .container > .services-content > .card > i {
-  	  			font-size: 2rem;
-  	  			padding: 15px;
-  	  			background: var(--pure-white);
-  	  			margin-bottom: 20px;
-  	  			width: fit-content;
-  	  			border-radius: var(--border-radius-l);
-  	  		}
-  	  		.services-sect > .container > .services-content > .card > .text-content > h3 {
-  	  			font-size: 22px;
-  	  			font-weight: 500;
-  	  			margin-bottom: 15px;
-  	  		}
+  	  		
   	  	</style>
   	  	<div class="container">
   	  	  <div class="title">
@@ -123,7 +135,7 @@
   	  	  	  <i class="fa-solid fa-pen-nib"></i>
   	  	  	  <div class="text-content">
   	  	  	  	<h3>Designing</h3>
-  	  	  	  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <!-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. --></p>
+  	  	  	  	<p>We are commited to making impactful designs assigned to be unique for it's own single purpose. None of any can be made twice.<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. --></p>
   	  	  	  </div>
   	  	  	  <div class="span-el">
   	  	  	  	<span>UX/UI Designing</span>
@@ -131,33 +143,35 @@
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="card">
-  	  	  	  <i class="fa-solid fa-scroll"></i>
+  	  	  	  <i class="fa-solid fa-print"></i>
   	  	  	  <div class="text-content">
   	  	  	  	<h3>Printing</h3>
-  	  	  	  	<p><!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  -->Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	  	  	  	<p>Our printing services are made to offer you with versatile outputs meant to be more than just visible but also insinuating<!-- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. --></p>
   	  	  	  </div>
   	  	  	  <div class="span-el">
   	  	  	  	<span>Large Format Printing</span>
-  	  	  	  	<span>Banners & Poster</span>
+  	  	  	  	<span>Banners</span>
+  	  	  	  	<span>Poster</span>
   	  	  	  	<span>T-shirts and Caps</span>
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="card">
   	  	  	  <i class="fa-solid fa-stamp"></i>
   	  	  	  <div class="text-content">
-  	  	  	  	<h3>Company Branding</h3>
-  	  	  	  	<p><!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!--  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. --></p>
+  	  	  	  	<h3>Branding</h3>
+  	  	  	  	<p>Your company and/or brand identity should not be average. Let us help you create a notable and outstanding brand made for just YOU!<!-- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. --></p>
   	  	  	  </div>
   	  	  	  <div class="span-el">
-  	  	  	  	<span>Creating Company Logos</span>
-  	  	  	  	<span>Customizing Company theme</span>
+  	  	  	  	<span>Company Logos</span>
+  	  	  	  	<span>Company themes</span>
+  	  	  	  	<span>Rebranding</span>
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="card">
-  	  	  	  <i class="fa-solid fa-pen-nib"></i>
+  	  	  	  <i class="fa-solid fa-flag"></i>
   	  	  	  <div class="text-content">
   	  	  	  	<h3>Social media ads</h3>
-  	  	  	  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <!-- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. --></p>
+  	  	  	  	<p>Social media today is one of the biggest source of clientele. Let us offer your the best way to communicate with them!<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. --></p>
   	  	  	  </div>
   	  	  	  <div class="span-el">
   	  	  	  	<span>Social media compaigns</span>
@@ -201,6 +215,8 @@
   	  	<p>&COPY; 2026 Chapters. All rights reserved</p>
   	  </div>
   	</footer>
+
+  	<script src="js/script.js"></script>
 
   </body>
 </html>
