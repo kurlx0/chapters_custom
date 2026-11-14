@@ -50,6 +50,11 @@
 	/*text-align: center;*/
 }
 
+.services-sect, .projects-sect, .contact-sect {
+	min-height: 90vh;
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
 
 .container { padding: 10px 90px; }
 
@@ -274,7 +279,12 @@ button {
 
 .services-sect {
 	min-height: 90vh;
-	padding-top: 100px;
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+
+.services-sect {
+    background: rgba(2, 16, 36, 0.035);
 }
 
 .services-sect > .container > .services-content {
@@ -282,7 +292,8 @@ button {
 	gap: 2rem;
 	flex-wrap: wrap;
 	justify-content: center;
-	border-bottom: 1px solid var(--primary-color);
+	/*border-bottom: 1px solid var(--primary-color);*/
+    border-bottom: none;
 	padding-bottom: 100px;
 }
 
@@ -322,8 +333,10 @@ button {
 	filter: opacity(0.045);
 	transform: rotate(-140deg);
 }
+
 .services-sect > .container > .services-content > .card {
-	background: var(--ice-blue);
+	/*background: var(--ice-blue);*/
+    background: var(--secondary-color);
 	padding: 30px 50px;
 	border-radius: var(--border-radius-xl);
 	border: 1px solid;
@@ -332,7 +345,10 @@ button {
 	z-index: 10;
 	cursor: pointer;
 	transition: 0.3s;
+
+	color: white;
 }
+
 .services-sect > .container > .services-content > .card::before {
 	content: "";
 	/*display: block;*/
@@ -347,13 +363,16 @@ button {
 	z-index: 10;
 	transition: 0.3s ease;
 }
+
 .services-sect > .container > .services-content > .card:hover::before{
 	opacity: 1;
 }
+
 .services-sect > .container > .services-content > .card:hover{
 	border-color: rgba(90, 196, 240, 94%);
 	transform: scale(1.04);
 }
+
 .services-sect > .container > .services-content > .card > i {
 	font-size: 2rem;
 	padding: 15px;
@@ -361,19 +380,25 @@ button {
 	margin-bottom: 20px;
 	width: fit-content;
 	border-radius: var(--border-radius-l);
+
+	color: var(--secondary-color);
 }
+
 .services-sect > .container > .services-content > .card > .text-content > h3 {
 	font-size: 20px;
 	font-weight: 500;
 	margin-bottom: 15px;
 }
+
 .services-sect > .container > .services-content > .card > .text-content > p {
 	font-size: 18px;
 	font-weight: 400;
 	margin-bottom: 20px;
-	border-top: 1px solid var(--secondary-color);
+	/*border-top: 1px solid var(--secondary-color);*/
+	border-top: 1px solid var(--pure-white);
 	padding-top: 10px;
 }
+
 .services-sect > .container > .services-content > .card > .span-el {
 	display: flex;
 	flex-wrap: wrap;
@@ -383,22 +408,38 @@ button {
 	font-size: 12px;
 	padding: 8px;
 	/*background: var(--ice-blue);*/
-	background: rgba(97 187 224 / 29%);
+	/*background: rgba(97 187 224 / 29%);*/
+    background: var(--slate-blue);
     border-radius: var(--border-radius-m);
     /*color: var(--secondary-color);*/
-    color: var(--secondary-color);
 	/*color: rgba(20, 46, 74, 100%);*/
+    color: var(--pure-white);
 	/*filter: opacity(0.8) contrast(1.8);*/
+
+    border: 1px solid var(--muted-lavender);
 }
 
+
+/* CONTACTS CSS */
+
+
+.contact-sect > .container > .title > h2 {
+	border-bottom: 1.5px solid var(--primary-color);
+	margin: 10px auto 25px;
+	padding-bottom: 5px;
+	width: fit-content;
+	color: var(--primary-color);
+	font-size: 32px;
+	font-weight: 300;
+}
 
 
 /* PROJECTS CSS */
 
-.projects-sect > .container {
+/*.projects-sect > .container {
 	min-height: 90vh;
 	padding-top: 100px;
-}
+}*/
 
 .projects-sect > .container > .title {
 	width: 100%;
@@ -426,6 +467,7 @@ button {
 }
 
 
+
 /* OUR PARTNERS CSS */
 
 .our-partners {
@@ -438,7 +480,8 @@ button {
 	margin: 0 auto;
 	padding: 40px 0 20px;
 	color: #37424EA7;
-	font-size: 22px;
+	font-size: 27px;
+	font-weight: 600;
 	width: fit-content;
 	/*width: calc(fit-content + 20px);*/
 	border-bottom: 1px solid black;
@@ -734,9 +777,7 @@ flex-direction: row;
 
 	/* HERO QUERY CSS */
 
-	.hero > .container > .hero-mid {
-	    width: 80%;
-	}
+	.hero > .container > .hero-mid { width: 80%; }
 
 	.hero > .container > .hero-mid > h2 {
 	    font-size: 48px;
@@ -754,9 +795,7 @@ flex-direction: row;
 		letter-spacing: 0.05rem;
 	}
 
-	.hero-button > a > .work-btn {
-		font-size: 15px;
-	}
+	.hero-button > a > .work-btn { font-size: 15px; }
 
 	.hero > .container > .classic-icon {
 		width: 230px;
@@ -766,17 +805,11 @@ flex-direction: row;
 
 	/* SERVICES QUERY CSS */
 
-	.services-sect > .container > .services-content > .card > .text-content > h3 {
-    	font-size: 18px;
-	}
+	.services-sect > .container > .services-content > .card > .text-content > h3 { font-size: 18px; }
 
-	.services-sect > .container > .services-content > .card > .text-content > p {
-	    font-size: 16px;
-	}
+	.services-sect > .container > .services-content > .card > .text-content > p { font-size: 16px; }
 
-	.services-sect > .container > .services-content > .card > .span-el > span {
-	    font-size: 11px;
-	}
+	.services-sect > .container > .services-content > .card > .span-el > span { font-size: 11px; }
 
 
 	/* PARTNERS TAB */
@@ -794,24 +827,18 @@ flex-direction: row;
 		align-items: unset;
 		padding: 20px 40px;
 
-		.left, .mid {
-			margin-bottom: 40px;
-		}
+		.left, .mid { margin-bottom: 40px; }
 
-		.left > .footer-logo {
-	        width: 130px;
-	    }
+		.left > .footer-logo { width: 130px; }
 	}
 	    
-	    .footer-logo-cap {font-size: 17px;}
+	    .footer-logo-cap { font-size: 17px; }
 
 }
 
-@media screen and (max-width: 850px) {
+@media screen and ( max-width: 850px ) {
 
-	.nav-bar {
-		width: 85%;
-	}
+	.nav-bar { width: 85%; }
 
 	.nav-bar > .container-query {
 		padding: 50px 30px;
@@ -825,32 +852,20 @@ flex-direction: row;
         margin-bottom: 50px;
     }
 	
-	.nav-bar > .container-query > .primary-tab > .nav-btn {
-        margin-top: 0;
-    }
+	.nav-bar > .container-query > .primary-tab > .nav-btn { margin-top: 0; }
 
-	.nav-bar > .container-query > .nav-list {
-		margin: 0 auto;
-	}
+	.nav-bar > .container-query > .nav-list { margin: 0 auto; }
 
-	.nav-bar > .container-query > .nav-list > li > a {
-        font-size: 15px;
-    }
+	.nav-bar > .container-query > .nav-list > li > a { font-size: 15px; }
 
-    .nav-btn > a > .call-btn {
-    	font-size: 15px;
-    }
+    .nav-btn > a > .call-btn { font-size: 15px; }
 
 
     /* HERO QUERY CSS */
 
-    .container {
-    	padding: 10px 50px;
-    }
+    .container { padding: 10px 50px; }
 
-	.hero > .container > .hero-mid {
-	    width: 95%;
-	}
+	.hero > .container > .hero-mid { width: 95%; }
 
 	.hero > .container > .hero-mid > h2 {
 	    font-size: 38px;
@@ -872,9 +887,7 @@ flex-direction: row;
 		width: 90%;
 	}
 
-	.hero-button > a > .work-btn {
-		font-size: 15px;
-	}
+	.hero-button > a > .work-btn { font-size: 15px; }
 
 	.hero > .container > .classic-icon {
 		width: 230px;
@@ -885,51 +898,30 @@ flex-direction: row;
 
 @media screen and (max-width: 550px) {
 
-	.nav-bar {
-		width: 95%;
-	}
+	.nav-bar { width: 95%; }
 
-	.nav-bar > .container-query {
-		left: -95%;
-	}
+	.nav-bar > .container-query { left: -95%; }
 
-	.nav-bar > .container-query > .primary-tab > .logo {
-		width: 140px;
-	}
+	.nav-bar > .container-query > .primary-tab > .logo { width: 140px; }
 
-	.nav-bar > .container-query > .nav-list > li > a {
-        font-size: 14px;
-    }
+	.nav-bar > .container-query > .nav-list > li > a { font-size: 14px; }
 
-    .nav-btn > a > .call-btn {
-    	font-size: 14px;
-    }
+    .nav-btn > a > .call-btn { font-size: 14px; }
 
 }
 
 @media screen and (max-width: 400px) {
 
-	.nav-bar > .container-query-display > .nav-elipsis, .nav-bar > .container-query > .nav-close-btn {
-		top: 14px;
-	}
+	.nav-bar > .container-query-display > .nav-elipsis, .nav-bar > .container-query > .nav-close-btn { top: 14px; }
 
-	.nav-bar > .container-query-display > .nav-elipsis > i, .nav-bar > .container-query > .nav-close-btn > i {
-		font-size: 18px
-	}
-	.nav-bar > .container-query-display > .logo {
-        width: 100px;
-    }
+	.nav-bar > .container-query-display > .nav-elipsis > i, .nav-bar > .container-query > .nav-close-btn > i { font-size: 18px }
+	
+	.nav-bar > .container-query-display > .logo { width: 100px; }
 
-	.nav-bar {
-		width: 100%;
-	}
+	.nav-bar { width: 100%; }
 
-	.hero > .container > .hero-mid {
-	    width: 100%;
-	}
+	.hero > .container > .hero-mid { width: 100%; }
 
-	.nav-bar > .container-query {
-		left: -100%;
-	}
+	.nav-bar > .container-query { left: -100%; }
 	
 }
