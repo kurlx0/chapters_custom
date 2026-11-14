@@ -489,19 +489,23 @@ button {
 
 .partners-container {
 	padding: 20px 90px 40px;
-	width: inherit;
+	margin: 0 auto;
+	width: 90%;
 	height: fit-content;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	overflow-x: auto;
+	/*overflow-x: hidden;*/
 }
 
 .partners-container > .partner-el {
-	width: 80px;
+	margin: 0 20px;
 }
 
 .partners-container > .partner-el > img {
 	filter: contrast(0.4);
+	width: 80px;
 }
 
 
@@ -865,6 +869,8 @@ flex-direction: row;
 	.partners-container > .partner-el { width: 50px; }
 	
 	.our-partners > h2 { padding: 20px 0 10px; }
+
+	.partners-container > .partner-el > img { width: 50px }
 
 
 	/* FOOTER QUERY CSS */
