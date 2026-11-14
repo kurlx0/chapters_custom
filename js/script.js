@@ -32,12 +32,17 @@ window.addEventListener('scroll', () => {
 	// };
 	// let scrolled = 1;
 	// console.log("2. Page No.: " + (scrolled += 1));
-	if (window.scrollY > 200) {
+	if (window.scrollY > 100) {
 		// console.log("scroll 2");
 		navBarContainer.style.background = "#02102499"
 		navBarContainer.style.padding = "10px 90px"
+		navBarContainer.style.backdropFilter = "blur(10px)"
+		navBarContainer.style.boxShadow = "1px -3px 30px var(--primary-color)"
 	} else {
 		navBarContainer.style.background = "none"
 		navBarContainer.style.padding = "30px 50px"
+		navBarContainer.style.backdropFilter = "unset"
+		navBarContainer.style.boxShadow = "unset"
 	}
+	console.log(Math.floor(window.scrollY))
 })
