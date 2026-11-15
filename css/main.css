@@ -435,18 +435,13 @@ button {
 	font-weight: 300;
 }
 
-.contact-content > .right {
-	padding-left: 20px;
-	width: 50%;
-}
-
 .contact-sect > .container > .contact-content {
 	display: flex;
 	/*flex-direction: ;*/
 	margin-top: 40px;
 }
 .contact-content > .left {
-	padding-right: 20px;
+	margin-right: 20px;
 	width: 50%;
 
 	.location {
@@ -455,11 +450,11 @@ button {
 		border: 1px solid var(--secondary-color);
 	}
 	.location > iframe {
-		height: 280px;
+		height: 300px;
 		border-radius: inherit;
 		width: 100%;
 	}
-	.contact-info { margin-top: 40px; }
+	.contact-info { margin-bottom: 40px; }
 	.contact-info > h2 {
 		color: var(--slate-blue);
 		font-weight: 600;
@@ -480,18 +475,30 @@ button {
 
 }
 
-.contact-content > .right > h2 {
-	color: var(--slate-blue);
-	font-weight: 600;
-	margin-bottom: 10px;
+.contact-content > .right {
+	margin-left: 20px;
+	width: 50%;
+	background: #dfedf6;
+	border-radius: var(--border-radius-m);
+	padding: 40px 40px 90px;
+	h2 {
+		color: var(--slate-blue);
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.line {
+		display: block;
+		background: var(--slate-blue);
+		height: 5px;
+        width: 160px;
+        margin: 20px 0;
+	}
 }
 .contact-content > .right > form {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	background: #dfedf6;
-	padding: 90px 40px;
-	border-radius: var(--border-radius-m);
+
 	input, textarea {
 		width: inherit;
 		padding: 10px 10px;
@@ -591,7 +598,7 @@ button {
 	/*overflow-x: hidden;*/
 }
 
-.partners-container > .partner-el { margin: 0 20px; }
+.partners-container > .partner-el { margin: 0 60px 0 20px; }
 
 .partners-container > .partner-el > img {
 	filter: contrast(0.4);
@@ -760,7 +767,7 @@ flex-direction: row;
 }
 
 .footer-bottom > .el-02 > a {
-    font-weight: 500;
+    font-weight: 400;
     color: var(--secondary-color);
     display: inline-block;
     width: fit-content;
@@ -786,7 +793,7 @@ flex-direction: row;
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1090px) {
 
 	.nav-bar {
 		width: 80%;
@@ -798,7 +805,8 @@ flex-direction: row;
 		width: 100vw;
 		justify-content: space-between;
 		padding: 10px 50px;
-		background: var(--primary-color);
+        background: #021024db;
+        backdrop-filter: blur(5px);
 		/*filter: opacity(0.5);*/
 		z-index: 0;
 	}
@@ -955,15 +963,17 @@ flex-direction: row;
 
 	/* CONTACT QUERY CSS */
 
-	.contact-content > .left {
-	    padding-right: 0px;
-	    width: 100%;
-	    margin-bottom: 40px;
-	}
-
 	.contact-sect > .container > .contact-content {
 	    margin-top: 20px;
 	    flex-direction: column;
+	}
+
+	.contact-sect > .container > .title > h2 { font-size: 21px; }
+
+	.contact-content > .left {
+	    margin-right: 0px;
+	    width: 100%;
+	    margin-bottom: 40px;
 	}
 
 	.contact-content > .left > .location { height: fit-content; }
@@ -971,17 +981,25 @@ flex-direction: row;
 	.contact-content > .left > .contact-info { margin-top: 20px; }
 
 	.contact-content > .right {
-	    padding-left: 0;
+	    margin-left: 0;
 	    width: 100%;
+
+	    .line { width: 140px }
+
+	    form > button { font-size: 15px; }
 	}
 
 
 	/* PARTNERS TAB */
+
 	.partners-container { padding: 20px 20px 40px; }
 
 	.partners-container > .partner-el { width: 50px; }
 	
-	.our-partners > h2 { padding: 20px 0 10px; }
+	.our-partners > h2 {
+		padding: 20px 0 10px;
+		font-size: 21px;
+	}
 
 	.partners-container > .partner-el > img { width: 50px }
 
@@ -989,9 +1007,9 @@ flex-direction: row;
 	/* FOOTER QUERY CSS */
 
 	.footer-content > .footer-top {
-		flex-direction: column;
+		/*flex-direction: column;
+		padding: 20px 40px;*/
 		align-items: unset;
-		padding: 20px 40px;
 
 		.left, .mid { margin-bottom: 40px; }
 
@@ -1000,22 +1018,16 @@ flex-direction: row;
 	    
 	.footer-logo-cap { font-size: 17px; }
 
-	.footer-bottom {
-    	padding: 25px 40px;
-	}
+	.footer-bottom { padding: 25px 40px; }
 
 	.footer-bottom > .el-01 {
 	    margin-bottom: 5px;
 	    font-size: 20px;
 	}
 
-	.footer-bottom > .el-02 {
-	    font-size: 13px;
-	}
+	.footer-bottom > .el-02 { font-size: 13px; }
 
-	.copyright > p {
-	    font-size: 12px;
-	}
+	.copyright > p { font-size: 12px; }
 
 }
 
@@ -1070,16 +1082,46 @@ flex-direction: row;
 		width: 90%;
 	}
 
-	.hero-button > a > .work-btn { font-size: 15px; }
+	.hero-button > a > .work-btn { font-size: 14px; }
 
 	.hero > .container > .classic-icon {
 		width: 230px;
 		height: auto;
 	}
 
+	.footer-content > .footer-top {
+		flex-direction: column;
+		align-items: unset;
+		padding: 20px 40px;
+	}
+
 }
 
-@media screen and (max-width: 550px) {
+@media screen and ( max-width: 550px ) {
+
+    /*.contact-content > .right > form { padding: 90px 20px; }*/
+
+    .contact-content {
+    	.left > .contact-info > h2, .right > h2 {
+	        margin-bottom: 30px;
+	        font-size: 19px;
+	    }
+	    .left {
+		    .contact-info > .details > span {
+		        padding: 10px 0;
+		        color: var(--slate-blue);
+		        font-size: 15px;
+		        i {
+			        font-size: 17px;
+			    }
+		    }
+		}
+		.right {
+	        form > button {
+	            font-size: 14px;
+	        }
+	    }
+	}
 
 	.nav-bar { width: 95%; }
 
@@ -1091,22 +1133,28 @@ flex-direction: row;
 
     .nav-btn > a > .call-btn { font-size: 14px; }
 
-    .contact-content > .right > form { padding: 90px 20px; }
+
+    .our-partners > h2, .projects-sect > .container > .title > h2 { font-size: 21px; }
+
+	.projects-sect > .container > .title > h3 { font-size: 19px; }
+
+	.footer-nav-bar > a {
+	    font-size: 15px;
+	}
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and ( max-width: 400px ) {
 
-	.nav-bar > .container-query-display > .nav-elipsis, .nav-bar > .container-query > .nav-close-btn { top: 14px; }
+	.nav-bar {
+		width: 100%;
 
-	.nav-bar > .container-query-display > .nav-elipsis > i, .nav-bar > .container-query > .nav-close-btn > i { font-size: 18px }
-	
-	.nav-bar > .container-query-display > .logo { width: 100px; }
-
-	.nav-bar { width: 100%; }
+		.container-query-display .nav-elipsis, .container-query > .nav-close-btn { top: 14px; }
+		.container-query-display > .nav-elipsis > i, .container-query > .nav-close-btn > i { font-size: 18px }
+		.container-query-display > .logo { width: 100px; }
+		.container-query { left: -100%; }
+	}
 
 	.hero > .container > .hero-mid { width: 100%; }
-
-	.nav-bar > .container-query { left: -100%; }
 	
 }
