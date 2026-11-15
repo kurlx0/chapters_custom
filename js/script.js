@@ -46,3 +46,49 @@ window.addEventListener('scroll', () => {
 	}
 	console.log(Math.floor(window.scrollY))
 })
+
+// const contactForm = document.getElementById('contact-form');
+
+// contactForm.addEventListener('submit', (e) => {
+// 	e.preventDefault();
+// 	console.log("Form handled with custom JS!");
+// })
+
+const form = document.getElementById('contact-form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("access_key", "7166c755-a696-4368-919e-5121db3efa66");
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+    submitBtn.style.filter = "opacity(0.5)";
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    submitBtn.style.filter = "opacity(0.75)";
+    }
+});
