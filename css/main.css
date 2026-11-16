@@ -601,7 +601,7 @@ button {
 .partners-container > .partner-el { margin: 0 60px 0 20px; }
 
 .partners-container > .partner-el > img {
-	filter: contrast(0.4);
+	/*filter: contrast(0.4);*/
 	/*width: 80px;*/
 	height: 80px;
 	width: auto;
