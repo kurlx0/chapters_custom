@@ -602,7 +602,9 @@ button {
 
 .partners-container > .partner-el > img {
 	filter: contrast(0.4);
-	width: 80px;
+	/*width: 80px;*/
+	height: 80px;
+	width: auto;
 }
 
 
@@ -1001,7 +1003,7 @@ flex-direction: row;
 		font-size: 21px;
 	}
 
-	.partners-container > .partner-el > img { width: 50px }
+	.partners-container > .partner-el > img { /*width: 50px*/ height: 40px }
 
 
 	/* FOOTER QUERY CSS */
@@ -1089,6 +1091,9 @@ flex-direction: row;
 		height: auto;
 	}
 
+
+	.partners-container > .partner-el > img { /*width: 50px*/ height: 30px }
+
 	.footer-content > .footer-top {
 		flex-direction: column;
 		align-items: unset;
@@ -1134,13 +1139,16 @@ flex-direction: row;
     .nav-btn > a > .call-btn { font-size: 14px; }
 
 
-    .our-partners > h2, .projects-sect > .container > .title > h2 { font-size: 21px; }
+    .services-sect > .container > .title > h2, .our-partners > h2, .projects-sect > .container > .title > h2 { font-size: 22px; margin: 10px auto; }
 
-	.projects-sect > .container > .title > h3 { font-size: 19px; }
+	}
+	.services-sect > .container > .title > h3, .projects-sect > .container > .title > h3 { font-size: 16px; font-weight:800 }
 
 	.footer-nav-bar > a {
 	    font-size: 15px;
 	}
+
+	.partners-container > .partner-el { margin: 0 28px; }
 
 }
 
