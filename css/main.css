@@ -24,7 +24,7 @@
 }
 
 * {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', 'Montserrat', sans-serif;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -52,11 +52,16 @@
 
 .services-sect, .projects-sect, .contact-sect {
 	min-height: 90vh;
-	padding-top: 90px;
 	padding-bottom: 90px;
 }
 
-.container { padding: 10px 90px; }
+.services-sect, .projects-sect {
+	padding-top: 90px;
+}
+
+.contact-sect { padding-top: 0;}
+
+.container { padding: 0 90px; }
 
 /* UNIVERSAL CSS */
 

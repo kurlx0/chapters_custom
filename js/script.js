@@ -92,3 +92,80 @@ form.addEventListener('submit', async (e) => {
     submitBtn.style.filter = "opacity(0.75)";
     }
 });
+
+
+// SLIDING EFFECT - PROJECTS TAB
+
+const slides = [
+  	  	{
+  	  	  title: "Title Element",
+  	  	  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  	  	  image: "pictures/image01.jpeg"
+  	  	},
+  	  	{
+  	  	  title: "Second Project Title",
+  	  	  text: "Here is the content for the second slide. Both the text and image stay on their respective sides and cleanly slide across into view when navigating.",
+  	  	  image: "pictures/image01.png"
+  	  	}
+  	  ];
+
+  	  let currentIndex = 0;
+  	  let isAnimating = false;
+
+  	  const leftPanel = document.getElementById("left-panel");
+  	  const rightPanel = document.getElementById("right-panel");
+  	  const titleEl = document.getElementById("project-title");
+  	  const textEl = document.getElementById("project-text");
+  	  const imgEl = document.getElementById("project-img");
+  	  const pins = document.querySelectorAll("#scroll-pins span");
+
+  	  function updateSlide(index, direction) {
+  	  	if (isAnimating) return;
+  	  	isAnimating = true;
+
+  	  	const slide = slides[index];
+  	  	const outClass = direction === "next" ? "slide-out-left" : "slide-out-right";
+  	  	const inClass = direction === "next" ? "slide-in-right" : "slide-in-left";
+
+  	  	// Step 1: Slide current panels out
+  	  	leftPanel.classList.add(outClass);
+  	  	rightPanel.classList.add(outClass);
+
+  	  	setTimeout(() => {
+  	  	  // Step 2: Swap content while invisible
+  	  	  titleEl.textContent = slide.title;
+  	  	  textEl.textContent = slide.text;
+  	  	  imgEl.src = slide.image;
+  	  	  leftPanel.scrollTop = 0;
+
+  	  	  pins.forEach((pin, i) => {
+  	  	  	pin.classList.toggle("active", i === index);
+  	  	  });
+
+  	  	  // Instantly position new content off-screen to start sliding in
+  	  	  leftPanel.classList.remove(outClass);
+  	  	  rightPanel.classList.remove(outClass);
+  	  	  leftPanel.classList.add(inClass);
+  	  	  rightPanel.classList.add(inClass);
+
+  	  	  void leftPanel.offsetWidth; // Force reflow
+
+  	  	  // Step 3: Slide new content into position
+  	  	  leftPanel.classList.remove(inClass);
+  	  	  rightPanel.classList.remove(inClass);
+
+  	  	  setTimeout(() => {
+  	  	  	isAnimating = false;
+  	  	  }, 400);
+  	  	}, 400);
+  	  }
+
+  	  document.getElementById("prev-btn").addEventListener("click", () => {
+  	  	currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  	  	updateSlide(currentIndex, "prev");
+  	  });
+
+  	  document.getElementById("next-btn").addEventListener("click", () => {
+  	  	currentIndex = (currentIndex + 1) % slides.length;
+  	  	updateSlide(currentIndex, "next");
+  	  });

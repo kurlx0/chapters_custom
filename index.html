@@ -15,7 +15,7 @@
 
   	<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
@@ -182,15 +182,278 @@
   	  	</div>
   	  </section>
 
-  	  <section class="projects-sect" id="projects">
+  	  <!-- <section class="projects-sect" id="projects">
   	  	<div class="container">
   	  	  <div class="title">
   	  	  	<h2>Projects</h2>
   	  	  	<h3>What we have done</h3>
   	  	  </div>
-  	  	  <div></div>
+  	  	  <style>
+  	  	  	.projects-content {
+  	  	  		width: 100%;
+  	  	  		max-height: 85vh;
+  	  	  		.internal-element {
+  	  	  			/*background: var(--primary-color);*/
+  	  	  			color: var(--pure-white);
+  	  	  			border-radius: var(--border-radius-m);
+  	  	  			width: 90%;
+  	  	  			max-height: inherit;
+  	  	  			display: flex;
+  	  	  			justify-content: space-between;
+  	  	  			margin: 0 auto;
+  	  	  			overflow: hidden;
+  	  	  			box-shadow: 2px 4px 17px #0210245c;
+  	  	  			.left {
+  	  	  				max-width: 60%;
+  	  	  				padding: 40px 90px;
+  	  	  				color: var(--primary-color);
+  	  	  				overflow-y: auto;
+  	  	  				h3 {
+  	  	  					font-size: 24px;
+  	  	  					margin-bottom: 20px;
+  	  	  				}
+  	  	  				p {
+  	  	  					font-size: 18px;
+  	  	  					line-height: 40px;
+  	  	  				}
+  	  	  			}
+  	  	  			.right {
+  	  	  				width: fit-content;
+  	  	  				max-width: 40%;
+  	  	  				height: auto;
+  	  	  				.project-right-content {
+  	  	  					overflow: hidden;
+  	  	  					img {
+  	  	  						display: block;
+  	  	  					}
+  	  	  				}
+  	  	  			}
+  	  	  			.scroll-pins {
+  	  	  				position: absolute;
+  	  	  				span {}
+  	  	  			}
+  	  	  		}
+  	  	  	}
+  	  	  </style>
+  	  	  <div class="projects-content">
+  	  	  	<div class="internal-element">
+  	  	  		<div class="left">
+  	  	  			<h3>Title Element</h3>
+  	  	  			<p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  	  	  		</div>
+  	  	  		<div class="right">
+  	  	  			<div class="project-right-content">
+  	  	  				<img src="pictures/image01.jpeg">
+  	  	  			</div>
+  	  	  		</div>
+  	  	  		<div id="scroll-pins" class="scroll-pins">
+  	  	  			<span></span>
+  	  	  		</div>
+  	  	  	</div>
+  	  	  	
+  	  	  </div>
   	  	</div>
-  	  </section>
+  	  </section> -->
+
+  	  <section class="projects-sect" id="projects">
+  	  <div class="container">
+  	  	<div class="title">
+  	  	  <h2>Projects</h2>
+  	  	  <h3>What we have done</h3>
+  	  	</div>
+  	  	<style>
+  	  	  .projects-content {
+  	  	  	width: 100%;
+  	  	  	max-height: 85vh;
+  	  	  	.internal-element {
+  	  	  	  position: relative;
+  	  	  	  /*background: var(--primary-color);*/
+  	  	  	  color: var(--pure-white);
+  	  	  	  border-radius: var(--border-radius-m, 12px);
+  	  	  	  width: 90%;
+  	  	  	  max-height: inherit;
+  	  	  	  display: flex;
+  	  	  	  justify-content: space-between;
+  	  	  	  margin: 0 auto;
+  	  	  	  overflow: hidden;
+  	  	  	  box-shadow: 2px 4px 17px #0210245c;
+
+  	  	  	  .left {
+  	  	  	  	max-width: 60%;
+  	  	  	  	width: 60%;
+  	  	  	  	padding: 40px 90px;
+  				color: var(--primary-color);
+  				overflow-y: auto;
+  				transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  				h3 {
+  				  font-size: 24px;
+  				  margin-bottom: 20px;
+  				}
+  				p {
+  				  font-size: 18px;
+  				  line-height: 40px;
+  				}
+  			  }
+  			  .right {
+  			  	width: 40%;
+  			  	height: auto;
+  			  	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  			  	.project-right-content {
+  			  	  overflow: hidden;
+  			  	  height: 100%;
+  			  	  img {
+  			  	  	display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+  			  	  }
+  			  	}
+  			  }
+
+  			  /* Slide animation modifier states */
+  			  .slide-out-left {
+  			  	transform: translateX(-50px);
+  			  	opacity: 0;
+  			  }
+  			  .slide-out-right {
+  			  	transform: translateX(50px);
+  			  	opacity: 0;
+  			  }
+  			  .slide-in-left {
+  			  	transform: translateX(-50px);
+  			  	opacity: 0;
+  			  	transition: none !important;
+  			  }
+  			  .slide-in-right {
+  			  	transform: translateX(50px);
+  			  	opacity: 0;
+  			  	transition: none !important;
+  			  }
+
+  			  .scroll-pins {
+  			  	position: absolute;
+  			  	bottom: 20px;
+  			  	left: 50%;
+  			  	transform: translateX(-50%);
+  			  	display: flex;
+  			  	gap: 8px;
+  			  	z-index: 10;
+  			  	span {
+  			  	  width: 10px;
+  			  	  height: 10px;
+  			  	  border-radius: 50%;
+  			  	  background: rgba(0, 0, 0, 0.25);
+  			  	  transition: background 0.3s ease;
+  			  	  &.active {
+  			  	  	background: #021024;
+  			  	  }
+  			  	}
+  			  }
+  			  .nav-btn {
+  			  	position: absolute;
+  			  	top: 50%;
+  			  	transform: translateY(-50%);
+  			  	background: rgba(255, 255, 255, 0.9);
+  			  	color: #021024;
+  			  	border: none;
+  			  	width: 42px;
+  			  	height: 42px;
+  			  	border-radius: 50%;
+  			  	font-size: 20px;
+  			  	cursor: pointer;
+  			  	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  			  	z-index: 10;
+  			  	display: flex;
+  			  	align-items: center;
+  			  	justify-content: center;
+  			  	transition: background 0.2s, transform 0.2s;
+  			  	&:hover {
+  			  	  background: #ffffff;
+  			  	  transform: translateY(-50%) scale(1.08);
+  			  	}
+  			  }
+  			  .prev-btn {
+  			  	left: 15px;
+  			  }
+  			  .next-btn {
+  			  	right: 15px;
+  			  }
+  			}
+  		  }
+
+  		  /* Responsive Breakpoints */
+  		  @media (max-width: 1090px) {
+  			.projects-content .internal-element {
+  			  flex-direction: column;
+  			  max-height: none;
+  			  
+  			  .left {
+  				max-width: 100%;
+  				width: 100%;
+  				padding: 30px 40px;
+  				max-height: 400px;
+  			  }
+  			  .right {
+  				width: 100%;
+  				height: 300px;
+  			  }
+  			  .nav-btn {
+  				width: 36px;
+  				height: 36px;
+  				font-size: 16px;
+  			  }
+  			  .prev-btn {
+  				left: 10px;
+  			  }
+  			  .next-btn {
+  				right: 10px;
+  			  }
+  			}
+  		  }
+
+  		  @media (max-width: 500px) {
+  			.projects-content .internal-element {
+  			  width: 98%;
+  			  
+  			  .left {
+  				padding: 20px 20px;
+  				h3 {
+  				  font-size: 20px;
+  				}
+  				p {
+  				  font-size: 15px;
+  				  line-height: 28px;
+  				}
+  			  }
+  			  .right {
+  				height: 220px;
+  			  }
+  			}
+  		  }
+  		</style>
+  		<div class="projects-content">
+  		  <div class="internal-element" id="project-card">
+  		  	<button class="nav-btn prev-btn" id="prev-btn" aria-label="Previous">&#8592;</button>
+
+  		  	<div class="left" id="left-panel">
+  		  	  <h3 id="project-title">Title Element</h3>
+  		  	  <p id="project-text" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  		  	</div>
+  		  	<div class="right" id="right-panel">
+  		  	  <div class="project-right-content">
+  		  	  	<img id="project-img" src="pictures/image01.jpeg" alt="Project Image">
+  		  	  </div>
+  		  	</div>
+  		  	<div id="scroll-pins" class="scroll-pins">
+  		  	  <span class="active"></span>
+  		  	  <span></span>
+  		  	</div>
+
+  		  	<button class="nav-btn next-btn" id="next-btn" aria-label="Next">&#8594;</button>
+  		  </div>
+  		</div>
+  	  </div>
+  	</section>
 
   	  <section class="contact-sect" id="contact">
   	  	<div class="container">
