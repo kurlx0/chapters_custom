@@ -44,7 +44,7 @@ window.addEventListener('scroll', () => {
 		navBarContainer.style.backdropFilter = "unset"
 		navBarContainer.style.boxShadow = "unset"
 	}
-	console.log(Math.floor(window.scrollY))
+	// console.log(Math.floor(window.scrollY))
 })
 
 // const contactForm = document.getElementById('contact-form');
@@ -169,3 +169,80 @@ const slides = [
   	  	currentIndex = (currentIndex + 1) % slides.length;
   	  	updateSlide(currentIndex, "next");
   	  });
+
+// const partnersContainer = document.getElementById("partners-container");
+// const partnerTrack = document.getElementById("partner-track");
+// const partnerElements = document.querySelectorAll(".partner-el");
+
+// console.log(partnerTrack)
+
+// const scrollPartnersX = () => {
+// 	// const listLength = partnerElements / 2;
+// };
+
+// partnerTrack.addEventListener('scroll', () => {
+// 	if (partnerTrack.scrollX == 10) {
+// 		console.log("Scroll is more than 10");
+// 	};
+// });
+
+// console.log(partnerElements);
+
+
+const container = document.getElementById('partners-container');
+const track = document.getElementById('partner-track');
+
+console.log(track);
+console.log(container);
+
+const speed = 0.7; // Pixels per frame (adjust speed here)
+let currentX = 0;
+let isPaused = false;
+
+// Pause scrolling on hover
+container.addEventListener('mouseenter', () => isPaused = true);
+container.addEventListener('mouseleave', () => isPaused = false);
+
+// 1. Ensure enough elements exist to fill the container width + buffer space
+function populateBuffer() {
+  const originalItems = Array.from(track.children);
+  while (track.scrollWidth < container.offsetWidth * 2) {
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      track.appendChild(clone);
+    });
+  }
+}
+
+// 2. Horizontal Animation & DOM Recycling Loop
+function animateMarquee() {
+  if (!isPaused) {
+    currentX -= speed;
+
+    const firstItem = track.firstElementChild;
+    if (firstItem) {
+      // Read the exact horizontal column gap dynamically
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const firstItemTotalWidth = firstItem.offsetWidth + gap;
+
+      // Once the first item has completely scrolled off-screen to the left:
+      if (Math.abs(currentX) >= firstItemTotalWidth) {
+        // Move the element from the front to the back of the track directly
+        track.appendChild(firstItem);
+
+        // Instantly compensate currentX back to prevent any jitter or jump
+        currentX += firstItemTotalWidth;
+      }
+    }
+
+    track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+  }
+
+  requestAnimationFrame(animateMarquee);
+}
+
+// Initialize once layout and images load
+window.addEventListener('load', () => {
+  populateBuffer();
+  requestAnimationFrame(animateMarquee);
+});

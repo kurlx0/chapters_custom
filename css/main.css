@@ -592,25 +592,58 @@ button {
 }
 
 .partners-container {
+	.partner-track {
+		display: flex;
+		flex-direction: row;
+		/*justify-content: space-around;*/
+		/*align-items: center;*/
+		gap: 180px;
+		will-change: transform;
+		/*animation: ScrollEffectX 15s linear infinite;*/
+		/*overflow: auto;*/
+		/*&::before {
+			content: "";
+	        width: 90%;
+	        height: 160px;
+	        box-shadow: inset 0px 0px 12px 27px #ffffff;
+	        position: absolute;
+	        margin: 0 auto;
+	        z-index: 30;
+		}*/
+	}
 	padding: 20px 90px 40px;
 	margin: 0 auto;
 	width: 90%;
-	height: fit-content;
+	max-width: 1200px;
+	position: relative;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
-	overflow-x: auto;
-	/*overflow-x: hidden;*/
+	height: fit-content;
+	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+	
+	/*overflow-x: auto;*/
+	overflow-x: hidden;
 }
 
-.partners-container > .partner-el { margin: 0 60px 0 20px; }
+/*.partners-container > .partner-track > .partner-el { margin: 0 60px 0 20px; }*/
 
-.partners-container > .partner-el > img {
+.partners-container > .partner-track > .partner-el > img {
 	/*filter: contrast(0.4);*/
 	/*width: 80px;*/
 	height: 80px;
 	width: auto;
 }
+
+/*@keyframes ScrollEffectX {
+	0% {
+    transform: translateX(0);
+  }
+  100% {*/
+    /* Shifts up by exactly 50% of the track's total height (the entire first set) */
+  /*  transform: translateX(-50%);
+  }
+}*/
 
 
 
@@ -999,16 +1032,18 @@ flex-direction: row;
 
 	/* PARTNERS TAB */
 
-	.partners-container { padding: 20px 20px 40px; }
+	.partners-container { padding: 20px 20px 40px; width: 80% }
 
-	.partners-container > .partner-el { width: 50px; }
+	.partners-container > .partner-track { gap: 130px; }
+
+	.partners-container > .partner-track > .partner-el { width: 50px; }
 	
 	.our-partners > h2 {
 		padding: 20px 0 10px;
 		font-size: 21px;
 	}
 
-	.partners-container > .partner-el > img { /*width: 50px*/ height: 40px }
+	.partners-container > .partner-track > .partner-el > img { /*width: 50px*/ height: 40px }
 
 
 	/* FOOTER QUERY CSS */
@@ -1097,7 +1132,9 @@ flex-direction: row;
 	}
 
 
-	.partners-container > .partner-el > img { /*width: 50px*/ height: 30px }
+	.partners-container > .partner-track > .partner-el > img { /*width: 50px*/ height: 30px }
+
+	.partners-container > .partner-track { gap: 90px; }
 
 	.footer-content > .footer-top {
 		flex-direction: column;
@@ -1146,14 +1183,18 @@ flex-direction: row;
 
     .services-sect > .container > .title > h2, .our-partners > h2, .projects-sect > .container > .title > h2 { font-size: 22px; margin: 10px auto; }
 
-	}
+	/*}*/
 	.services-sect > .container > .title > h3, .projects-sect > .container > .title > h3 { font-size: 16px; font-weight:800 }
+
+	.partners-container { width: 65% }
+
+	.partners-container > .partner-track { gap: 50px; }
 
 	.footer-nav-bar > a {
 	    font-size: 15px;
 	}
 
-	.partners-container > .partner-el { margin: 0 28px; }
+	/*.partners-container > .partner-track > .partner-el { margin: 0 28px; }*/
 
 }
 
