@@ -105,7 +105,12 @@ const slides = [
   	  	{
   	  	  title: "Second Project Title",
   	  	  text: "Here is the content for the second slide. Both the text and image stay on their respective sides and cleanly slide across into view when navigating.",
-  	  	  image: "pictures/image01.png"
+  	  	  image: "pictures/image01.PNG"
+  	  	},
+  	  	{
+  	  	  title: "Third Project Title",
+  	  	  text: "Here is the content for the third slide. Both the text and image stay on their respective sides and cleanly slide across into view when navigating.",
+  	  	  image: "pictures/image01.jpeg"
   	  	}
   	  ];
 
