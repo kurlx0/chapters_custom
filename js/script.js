@@ -87,19 +87,24 @@ form.addEventListener('submit', async (e) => {
 
 const slides = [
 	{
-	  title: "Title Element",
-	  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-	  image: "pictures/image02.png"
+	  title: "Advantage Pearl Media",
+	  text: "This was a poster for Advantage Pearl Media for the Ramadhan compaign. Wishing the moslims a swift experience through the holy month of Ramadhan.",
+	  image: "pictures/projects/ADVANTAGE_PEARL_MEDIA.png"
 	},
 	{
-	  title: "Second Project Title",
-	  text: "Here is the content for the second slide. Both the text and image stay on their respective sides and cleanly slide across into view when navigating.",
-	  image: "pictures/image01.PNG"
+	  title: "The Ape Face",
+	  text: "The Ape Face is a start up clothing brand known for it's aesthetics wear for both men and women. They entrasted us to create for them this logo as part of the brand strategy including many other branding items.",
+	  image: "pictures/projects/APE_LOGO.png"
 	},
 	{
-	  title: "Third Project Title",
-	  text: "Here is the content for the third slide. Both the text and image stay on their respective sides and cleanly slide across into view when navigating.",
-	  image: "pictures/image01.jpeg"
+	  title: "Grate Make Film",
+	  text: "The brand Grate Make Films is a popular movie production company in Uganda that is well known for it's famous movies going beyond borders. This was a brand mock up after recreating it's logo and creating variables for a wide range of choices.",
+	  image: "pictures/projects/GRATEMAKE_FILM.png"
+	},
+	{
+	  title: "The Prince's burger",
+	  text: "This is a poster for the Prince's burger food company that was crafted by one of the best designers from the Chapters for Art company.",
+	  image: "pictures/projects/PRINCE'S_BURGER.png"
 	}
 ];
 
