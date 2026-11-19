@@ -33,6 +33,14 @@
 	z-index: 0;
 }
 
+body {
+    background: linear-gradient(45deg, #020c19 40%, #041733bd), url(../pictures/backgrounds/07-02.jpg);
+    background-position-y: center;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+}
+
 .classic-icon {
 	display: block;
 	position: relative;
@@ -189,8 +197,27 @@ button {
 
 .hero {
 	min-height: 100vh;
-	background: var(--background-r-gradient);
+    /* background: var(--background-r-gradient); */
+    /*background: linear-gradient(90deg, #09142be3 70% , #0c1949d9), url(../pictures/backgrounds/07.jpg);*/
+    /*background: linear-gradient(90deg, #0718312b 30% , #060d1b94 70%), url(../pictures/backgrounds/07-02.jpg);*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/*.hero::before {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	z-index: -1;
+    background: linear-gradient(90deg, #282b43ad, #0f1035a6), url(../pictures/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 30%;
+}*/
 
 .hero > .container {
 	display: flex;
@@ -201,7 +228,7 @@ button {
 .hero > .container > .classic-icon {
 	position: absolute;
 	bottom: 0;
-	right: 5%;
+	right: 25%;
 	z-index: 1;
 }
 
@@ -275,7 +302,8 @@ button {
 }
 
 .services-sect {
-    background: rgba(2, 16, 36, 0.035);
+    /*background: rgba(2, 16, 36, 0.035);*/
+    background: rgb(227 236 242);
 }
 
 .services-sect > .container > .services-content {
@@ -400,6 +428,9 @@ button {
 
 
 /* PROJECTS CSS */
+.projects-sect {
+	background: var(--pure-white);
+}
 .projects-content {
   	width: 100%;
   	max-height: 85vh;
@@ -524,6 +555,11 @@ button {
 
 /* CONTACTS CSS */
 
+.contact-sect {
+	background: rgb(227 236 242);
+	padding-top: 20px;
+}
+
 .contact-sect > .container > .title > h2 {
 	border-bottom: 1.5px solid var(--primary-color);
 	margin: 10px auto 25px;
@@ -536,7 +572,7 @@ button {
 
 .contact-sect > .container > .contact-content {
 	display: flex;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 .contact-content > .left {
 	margin-right: 20px;
@@ -665,7 +701,8 @@ button {
 .our-partners {
 	width: 100%;
 	height: fit-content;
-	background: #02102409;
+	/*background: #02102409;*/
+	background: var(--pure-white);
 	h2 {
 		margin: 0 auto;
 		padding: 40px 0 20px;
@@ -829,6 +866,7 @@ footer > .container { width: 100%; padding: 0; }
     display: grid;
     grid-auto-flow: row;
     justify-items: center;
+    background: linear-gradient(45deg, #e6ebeee3 70%, #ffffff82);
 }
 
 .footer-bottom > .el-01 {
@@ -987,6 +1025,13 @@ footer > .container { width: 100%; padding: 0; }
 
 	/* HERO QUERY CSS */
 
+	.hero {
+	    /*background: linear-gradient(90deg, #060d1bf2 30% , #060d1bc7 70%), url(../pictures/backgrounds/07-02.jpg);*/
+	    background-size: cover;
+	    background-position: right;
+	    background-repeat: no-repeat;
+	}
+
 	.hero > .container > .hero-mid { width: 80%; }
 
 	.hero > .container > .hero-mid > h2 {
@@ -1015,6 +1060,8 @@ footer > .container { width: 100%; padding: 0; }
 
 	/* SERVICES QUERY CSS */
 
+	.services-sect > .container > .services-content { padding-bottom: 0 }
+
 	.services-sect > .container > .services-content > .card > .text-content > h3 { font-size: 18px; }
 
 	.services-sect > .container > .services-content > .card > .text-content > p { font-size: 16px; }
@@ -1025,7 +1072,7 @@ footer > .container { width: 100%; padding: 0; }
 	/* CONTACT QUERY CSS */
 
 	.contact-sect > .container > .contact-content {
-	    margin-top: 20px;
+	    margin-top: 0;
 	    flex-direction: column;
 	}
 
@@ -1044,7 +1091,7 @@ footer > .container { width: 100%; padding: 0; }
 	.contact-content > .right {
 	    margin-left: 0;
 	    width: 100%;
-	    .line { width: 140px }
+	    .line { width: 140px ; margin: 10px 0}
 	    form > button { font-size: 15px; }
 	}
 
@@ -1091,7 +1138,7 @@ footer > .container { width: 100%; padding: 0; }
 @media (max-width: 1090px) {
 	.projects-content .internal-element {
 	flex-direction: column;
-	max-height: none;
+	/*max-height: none;*/
 
 	.left {
 		max-width: 100%;
@@ -1173,6 +1220,7 @@ footer > .container { width: 100%; padding: 0; }
 	.hero > .container > .classic-icon {
 		width: 230px;
 		height: auto;
+		right: 5%;
 	}
 
 	.partners-container > .partner-track > .partner-el > img { /*width: 50px*/ height: 30px }
@@ -1189,14 +1237,22 @@ footer > .container { width: 100%; padding: 0; }
 
 @media screen and ( max-width: 550px ) {
 
+	.services-sect, .projects-sect, .contact-sect {
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+
+	.services-sect > .container > .title { margin-bottom: 0 }
+
     .contact-content {
+    	margin-top: 0;
     	.left > .contact-info > h2, .right > h2 {
-	        margin-bottom: 30px;
+	        margin-bottom: 10px;
 	        font-size: 19px;
 	    }
 	    .left {
 		    .contact-info > .details > span {
-		        padding: 10px 0;
+		        padding: 5px 0;
 		        color: var(--slate-blue);
 		        font-size: 15px;
 		        i {
@@ -1205,6 +1261,7 @@ footer > .container { width: 100%; padding: 0; }
 		    }
 		}
 		.right {
+			padding: 40px;
 	        form > button {
 	            font-size: 14px;
 	        }

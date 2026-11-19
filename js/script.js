@@ -7,9 +7,9 @@ const navQueryItems = document.querySelectorAll(".nav-query-item");
 console.log(navQueryItems)
 
 navQueryItems.forEach((el, i) => {
-	console.log(`${el.textContent} ${i}`)
+	// console.log(`${el.textContent} ${i}`)
 	el.addEventListener('click', () => {
-		console.log(`${el.textContent} Button clicked!`);
+		// console.log(`${el.textContent} Button clicked!`);
 		containerQuery.style.left = "-100vw";
 	})
 })
