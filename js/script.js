@@ -89,22 +89,22 @@ const slides = [
 	{
 	  title: "Advantage Pearl Media",
 	  text: "This was a poster for Advantage Pearl Media for the Ramadhan compaign. Wishing the moslims a swift experience through the holy month of Ramadhan.",
-	  image: "pictures/projects/ADVANTAGE_PEARL_MEDIA.PNG"
+	  image: "pictures/projects/ADVANTAGE_PEARL_MEDIA.png"
 	},
 	{
 	  title: "The Ape Face",
 	  text: "The Ape Face is a start up clothing brand known for it's aesthetics wear for both men and women. They entrasted us to create for them this logo as part of the brand strategy including many other branding items.",
-	  image: "pictures/projects/APE_LOGO.PNG"
+	  image: "pictures/projects/APE_LOGO.png"
 	},
 	{
 	  title: "Grate Make Film",
 	  text: "The brand Grate Make Films is a popular movie production company in Uganda that is well known for it's famous movies going beyond borders. This was a brand mock up after recreating it's logo and creating variables for a wide range of choices.",
-	  image: "pictures/projects/GRATEMAKE_FILM.PNG"
+	  image: "pictures/projects/GRATEMAKE_FILM.png"
 	},
 	{
 	  title: "The Prince's burger",
 	  text: "This is a poster for the Prince's burger food company that was crafted by one of the best designers from the Chapters for Art company.",
-	  image: "pictures/projects/PRINCE'S_BURGER.PNG"
+	  image: "pictures/projects/PRINCE'S_BURGER.png"
 	}
 ];
 
