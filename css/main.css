@@ -35,7 +35,7 @@
 
 body {
     background: linear-gradient(45deg, #020c19 40%, #041733bd), url(../pictures/backgrounds/07-02.jpg);
-    background-position-y: center;
+    /* background-position-y: center; */
     background-attachment: fixed;
     background-position: right;
     background-size: cover;
